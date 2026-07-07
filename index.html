@@ -481,7 +481,6 @@
     <!-- APRESENTAÇÃO CINEMÁTICA (APARECE APENAS UMA VEZ) -->
     <div class="intro-screen" id="intro-screen">
         <div class="intro-content">
-            <!-- A logo aqui agora se adapta ao tema (Escuro/Claro) através do JavaScript -->
             <img id="intro-logo" src="" alt="JK Fernandes" class="intro-logo">
             <div class="typewriter-container">
                 <span id="typewriter-text"></span><span class="cursor">|</span>
@@ -556,11 +555,11 @@
     <!-- BARRA DE CONFIANÇA (COM DATA-MODAL PARA POPUP) -->
     <section class="trust-bar">
         <div class="container auto-grid">
-            <div class="trust-card reveal" data-modal="expressa">
-                <i class="fas fa-shipping-fast"></i>
+            <div class="trust-card reveal" data-modal="atendimento">
+                <i class="fas fa-user-tie"></i>
                 <div>
-                    <h4>Entrega Expressa</h4>
-                    <p>Logística tática na região.</p>
+                    <h4>Atendimento Personalizado</h4>
+                    <p>Soluções sob medida para sua obra.</p>
                 </div>
             </div>
             <div class="trust-card reveal" data-modal="preco" style="transition-delay: 0.1s;">
@@ -620,7 +619,7 @@
         </div>
     </section>
 
-    <!-- DEPARTAMENTOS / CATÁLOGO (COM DATA-MODAL PARA POPUP) -->
+    <!-- DEPARTAMENTOS / CATÁLOGO -->
     <section class="section-padding departments-section" id="produtos">
         <div class="container">
             <div style="text-align: center;">
@@ -688,7 +687,7 @@
     <!-- CALL TO ACTION -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="reveal">Pronto para iniciar o seu império?</h2>
+            <h2 class="reveal">seu projeto começa aqui</h2>
             <p class="reveal" style="transition-delay: 0.1s;">Nossa equipe técnica está aguardando o seu contato. Apresente sua planta ou lista de materiais e receba nossa engenharia de preços.</p>
             <a href="https://wa.me/5511984506106?text=Ol%C3%A1%2C%20tenho%20um%20projeto%20e%20gostaria%20da%20consultoria%20de%20pre%C3%A7os%20da%20JK%20Fernandes." target="_blank" class="btn-primary reveal" style="transition-delay: 0.2s; background: white; color: var(--brand-red);">
                 <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> Falar com Especialista
@@ -696,7 +695,7 @@
         </div>
     </section>
 
-    <!-- RODAPÉ COM ASSINATURA -->
+    <!-- RODAPÉ -->
     <footer class="footer" id="contato">
         <div class="container auto-grid" style="gap: 50px;">
             <div class="footer-logo reveal">
@@ -719,7 +718,7 @@
             </div>
 
             <div class="reveal" style="transition-delay: 0.2s;">
-                <h4 class="footer-title">Contato</h4>
+                <h4 class="footer-title">Quartel General</h4>
                 <ul class="footer-contact">
                     <li>
                         <i class="fab fa-whatsapp"></i>
@@ -818,7 +817,7 @@
                 // Tenta forçar a tela cheia
                 const elem = document.documentElement;
                 if (elem.requestFullscreen) {
-                    elem.requestFullscreen().catch(err => console.log("Fullscreen bloqueado"));
+                    elem.requestFullscreen().catch(err => console.log("Fullscreen bloqueado pelo navegador"));
                 } else if (elem.webkitRequestFullscreen) { 
                     elem.webkitRequestFullscreen();
                 } else if (elem.msRequestFullscreen) { 
@@ -867,10 +866,10 @@
         // 3. BANCO DE DADOS DOS MODAIS (CAIXAS DE INFORMAÇÃO)
         const waBase = "https://wa.me/5511984506106?text=";
         const modalData = {
-            "expressa": { icon: "fas fa-shipping-fast", title: "Entrega Expressa", desc: "Tempo é dinheiro em qualquer obra. Por isso, contamos com logística inteligente e caminhões sempre prontos para garantir que seu material chegue exatamente quando você precisa, sem paralisar o seu cronograma.", waText: "Olá! Vi no site sobre a Entrega Expressa e gostaria de saber os prazos para minha região." },
+            "atendimento": { icon: "fas fa-user-tie", title: "Atendimento Personalizado", desc: "Entendemos que cada obra é única. Nossa equipe de especialistas está pronta para ouvir suas necessidades, tirar dúvidas técnicas e montar a lista de materiais exata para o seu projeto, evitando desperdícios e garantindo a melhor solução.", waText: "Olá! Vi no site sobre o Atendimento Personalizado e gostaria de falar com um especialista sobre os detalhes da minha obra." },
             "preco": { icon: "fas fa-tags", title: "Preço Justo", desc: "Nós negociamos grandes volumes diretamente com as maiores indústrias e fábricas do país. O resultado? Nós repassamos esse desconto para você. Aqui, qualidade premium não custa mais caro.", waText: "Olá! Gostaria de cotar materiais com o preço justo da JK Fernandes." },
             "pagamento": { icon: "fas fa-credit-card", title: "Pagamento Fácil", desc: "Entendemos o fluxo de caixa de uma obra perfeitamente. Oferecemos parcelamento facilitado em diversos cartões e condições totalmente flexíveis para viabilizar seu projeto.", waText: "Olá! Quero saber mais sobre as condições de parcelamento e pagamento." },
-            "confianca": { icon: "fas fa-shield-alt", title: "Nossa Confiança", desc: "Com mais de 4 anos de mercado, centenas de obras abastecidas e clientes 100% satisfeitos, nosso maior patrimônio é o nosso nome. Construímos relacionamentos duradouros.", waText: "Olá, JK Fernandes! Gostaria de conversar com um especialista sobre uma parceria." },
+            "confianca": { icon: "fas fa-shield-alt", title: "Nossa Confiança", desc: "Com mais de 4 anos de mercado, centenas de obras abastecidas e clientes 100% satisfeitos, nosso maior patrimônio é o nosso nome. Construímos relacionamentos duradouros baseados em total transparência, não apenas vendas.", waText: "Olá, JK Fernandes! Gostaria de conversar com um especialista sobre uma parceria." },
             "garantia": { icon: "fas fa-award", title: "Garantia Total", desc: "Você não pode arriscar a estrutura da sua casa ou prédio. Todos os nossos produtos possuem certificação do Inmetro, selo ISO e garantia direta de fábrica.", waText: "Olá! Tenho interesse em produtos com garantia de fábrica." },
             "qualidade": { icon: "fas fa-gem", title: "Padrão de Qualidade", desc: "Trabalhamos estritamente com as marcas líderes do mercado nacional e internacional. Cada cimento, cada aço e cada acabamento vendido passa por controle de excelência.", waText: "Olá! Quero materiais de alto padrão e qualidade comprovada." },
             "basico": { icon: "fas fa-cubes", title: "Material Básico", desc: "O alicerce inquebrável da sua obra. Fornecemos cimento das marcas mais confiáveis, areia e pedra de alta pureza, blocos estruturais e argamassas prontas.", waText: "Olá! Preciso fazer um orçamento da linha de Material Básico." },
@@ -915,11 +914,9 @@
             mainNav.classList.toggle('active');
             let icon = mobileMenuBtn.querySelector('i');
             if(mainNav.classList.contains('active')){
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                icon.classList.replace('fa-bars', 'fa-times');
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                icon.classList.replace('fa-times', 'fa-bars');
             }
         });
 
